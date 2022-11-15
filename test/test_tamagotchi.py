@@ -96,7 +96,7 @@ class TestTamagotchi(unittest.TestCase):
                         "Deve ser possivel o tamagotchi dormir se ele tiver perdido pelo menos 5 pontos de energia.")
         self.assertEqual(20, tamagotchi.getEnergiaAtual(),
                          "Ao dormir, o tamagotchi ganhara a energia maxima que ele pode ter.")
-        self.assertEqual(6, tamagotchi.getSaciedadeAtual(),
+        self.assertEqual(9, tamagotchi.getSaciedadeAtual(),
                          "Ao dormir, o tamagotchi perdera 2 pontos de saciedade")
         self.assertEqual(4, tamagotchi.getLimpezaAtual(),
                          "Ao dormir, a limpeza do tamagotchi nao mudara.")
