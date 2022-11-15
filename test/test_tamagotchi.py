@@ -45,7 +45,7 @@ class TestTamagotchi(unittest.TestCase):
                          "Ao brincar, o tamagotchi aumentara a idade em 1.")
 
     def testComerAlterandoValores(self):
-        tamagotchi = Tamagotchi(20, 10, 15, 30)
+        tamagotchi = Tamagotchi(20, 7, 15, 30)
 
         self.assertTrue(tamagotchi.brincar(),
                         "Deve ser possivel o tamagotchi brinca se ele nao tiver morrido.")
@@ -84,7 +84,7 @@ class TestTamagotchi(unittest.TestCase):
                          "nao deve ser possivel o tamagotchi dormir se ele nao tiver perdido pelo menos 5 pontos de energia.")
 
     def testDormirAlterandoValores(self):
-        tamagotchi = Tamagotchi(20, 10, 15, 30)
+        tamagotchi = Tamagotchi(20, 7, 15, 30)
         self.assertTrue(tamagotchi.brincar(),
                         "Deve ser possivel o tamagotchi brinca se ele nao tiver morrido.")
         self.assertTrue(tamagotchi.comer(),
@@ -96,7 +96,7 @@ class TestTamagotchi(unittest.TestCase):
                         "Deve ser possivel o tamagotchi dormir se ele tiver perdido pelo menos 5 pontos de energia.")
         self.assertEqual(20, tamagotchi.getEnergiaAtual(),
                          "Ao dormir, o tamagotchi ganhara a energia maxima que ele pode ter.")
-        self.assertEqual(9, tamagotchi.getSaciedadeAtual(),
+        self.assertEqual(6, tamagotchi.getSaciedadeAtual(),
                          "Ao dormir, o tamagotchi perdera 2 pontos de saciedade")
         self.assertEqual(4, tamagotchi.getLimpezaAtual(),
                          "Ao dormir, a limpeza do tamagotchi nao mudara.")
@@ -106,7 +106,7 @@ class TestTamagotchi(unittest.TestCase):
                          "Ao dormir, o tamagotchi aumetara sua idade equivalente ao número de turnos que ele dormiu para recuperar sua energia maxima.")
 
     def testBanharAlterandoValores(self):
-        tamagotchi = Tamagotchi(20, 10, 15, 30)
+        tamagotchi = Tamagotchi(20, 8, 15, 30)
         self.assertTrue(tamagotchi.brincar(),
                         "Deve ser possivel o tamagotchi brinca se ele nao tiver morrido.")
         tamagotchi.brincar()
