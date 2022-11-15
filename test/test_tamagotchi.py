@@ -170,11 +170,15 @@ class TestTamagotchi(unittest.TestCase):
                         "Deve ser possivel o tamagotchi brinca se ele nao tiver morrido.")
         tamagotchi.brincar()
         tamagotchi.brincar()
+        tamagotchi.brincar()
+        tamagotchi.brincar()
+
+
         self.assertTrue(tamagotchi.dormir(),
                         "Deve ser possivel o tamagotchi dormir se ele tiver perdido pelo menos 5 pontos de energia.")
         self.assertTrue(tamagotchi.banhar(),
                         "Deve ser possivel o tamagotchi banhar se ele nao tiver morrido.")
-        self.assertFalse(tamagotchi.getEstaVivo(),
+        self.assertEqual(False, tamagotchi.getEstaVivo(),
                          "Quando a idade atual ultrapassa a idade maxima, ele acaba morrendo de velhice.")
         self.assertEqual(10, tamagotchi.getIdadeAtual(),
                          "Quando o tamagotchi morre de velhice, a sua idade atual fica igual a idade maxima.")
